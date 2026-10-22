@@ -1,0 +1,13 @@
+{
+  "listen": ":8090",
+  "imgproxy": "http://127.0.0.1:8080",
+  "tenants": [
+    {
+      "id": "example",
+      "token": "0123456789abcdef0123456789abcdef0123456789abcdef",
+      "enabled": true,
+      "domains": ["example.com", "www.example.com"],
+      "buckets": ["example-public"]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+[Unit]
+Description=mediacdn gateway (tenant image URLs in front of imgproxy)
+After=network-online.target imgproxy.service
+Wants=imgproxy.service
+
+[Service]
+User=imgproxy
+# Must provide IMGPROXY_KEY and IMGPROXY_SALT (hex), same values as imgproxy.
+EnvironmentFile=/etc/imgproxy.env
+ExecStart=/usr/local/bin/mediacdn-gateway /etc/mediacdn/gateway.json
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
