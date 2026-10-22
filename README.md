@@ -44,6 +44,13 @@ imgproxy's `IMGPROXY_ALLOWED_SOURCES` must include the schemes/buckets tenants u
 
 Deployment examples: [`deploy/mediacdn-gateway.service`](deploy/mediacdn-gateway.service) (systemd) and [`deploy/nginx.conf`](deploy/nginx.conf) (TLS + proxy cache in front).
 
+## Documentation
+
+- [API reference](docs/api.md) — endpoints, parameters, format selection, errors
+- [Architecture](docs/architecture.md) — request flow, caching, security model
+- [Deployment](docs/deployment.md) — imgproxy, gateway, nginx, monitoring
+- [Managing tenants](docs/tenants.md) — add, disable, rotate, troubleshoot
+
 ## Next.js loader
 
 ```ts
