@@ -66,3 +66,7 @@ export default function mediacdnLoader({ src, width, quality }: { src: string; w
   return `${CDN}/t/${TOKEN}/image/${b64url(source)}?w=${width}&q=${quality ?? 75}`;
 }
 ```
+
+## License
+
+[MIT](LICENSE) © MikroJit Technologies
